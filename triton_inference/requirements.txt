@@ -1,0 +1,10 @@
+transformers
+torch
+onnx
+onnxruntime
+onnxruntime-gpu
+torch-tensorrt
+tritonclient[http]
+tqdm 
+scikit-learn
+numpy

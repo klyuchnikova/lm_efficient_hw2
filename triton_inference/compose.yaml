@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    tritonserver:
+        ports:
+            - '8000:8000'
+            - '8001:8001'
+            - '8002:8002'
+        volumes:
+            - 'D:/E/Copy/PyCharm/Hometask/ml_hard_models_2025/lm_efficient_hw2/triton_inference/model_repository:/models'
+        container_name: 'HSE_ht1-triton'
+        image: nvcr.io/nvidia/tritonserver:25.02-py3
+        command: tritonserver --model-repository=/models --exit-on-error=false --repository-poll-secs=60
+        shm_size: '16gb'
